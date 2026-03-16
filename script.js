@@ -1,6 +1,5 @@
-// document.getElementById('customForm').addEventListener('submit', function(event) {
-function formsubmit()  {  
-let form = this;
+document.getElementById('customForm').addEventListener('submit', function(event) {
+    let form = this;
     
     function clearOtherErrors(fields) {
       fields.forEach(f => {
@@ -24,6 +23,7 @@ let form = this;
        genderError.style.display = 'none';
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
+        event.preventDefault();
       return;
     }
      else if (/\d/.test(nameInputf.value)) {
@@ -34,7 +34,7 @@ let form = this;
        genderError.style.display = 'none';
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      
+       event.preventDefault();
       return;
     }
      else if (/[!@#$%^&*().]/.test(nameInputf.value)) {
@@ -45,7 +45,7 @@ let form = this;
        genderError.style.display = 'none';
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
       return;
     }
      else if (nameInputf.value.length < 4) {
@@ -56,7 +56,7 @@ let form = this;
        genderError.style.display = 'none';
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
       return;
     } 
     else if (nameInputf.value.charAt(0) !== nameInputf.value.charAt(0).toUpperCase()) {
@@ -67,7 +67,7 @@ let form = this;
        genderError.style.display = 'none';
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
       return;
     } 
     else {
@@ -90,7 +90,7 @@ let form = this;
        genderError.style.display = 'none'; 
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+      event.preventDefault();
         return;
     } 
     else if (/\d/.test(nameInputl.value)) {
@@ -101,7 +101,7 @@ let form = this;
        genderError.style.display = 'none'; 
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
     }
      else if (/[!@#$%^&*().]/.test(nameInputl.value)) {
@@ -112,7 +112,7 @@ let form = this;
        genderError.style.display = 'none'; 
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
     }
      else if (nameInputl.value.length < 3) {
@@ -123,7 +123,7 @@ let form = this;
        genderError.style.display = 'none';
        let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-       //event.preventDefault();
+       event.preventDefault();
         return;
     } 
     else if (nameInputl.value.charAt(0) !== nameInputl.value.charAt(0).toUpperCase()) {
@@ -134,7 +134,7 @@ let form = this;
        genderError.style.display = 'none'; 
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
     } 
     else {
@@ -160,7 +160,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-       //event.preventDefault();
+       event.preventDefault();
         return;
       } 
       else if (mobileInput.value.length !== 10) {
@@ -171,7 +171,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
       }
        else if (!firstDigitPattern.test(mobileInput.value)) {
@@ -182,7 +182,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-       //event.preventDefault();
+       event.preventDefault();
         return;
       } 
       else {
@@ -205,7 +205,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
       }
        else {
@@ -228,7 +228,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
       }
        else if (passwordInput.value.length < 8) {
@@ -239,7 +239,7 @@ let form = this;
        genderError.style.display = 'none';
        let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
       } 
       else if (passwordInput.value.charAt(0)!==passwordInput.value.charAt(0).toUpperCase()){
@@ -250,7 +250,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
       }
        else if (!/[a-z]/.test(passwordInput.value)) {
@@ -261,7 +261,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none'; 
-      // event.preventDefault();
+       event.preventDefault();
         return;
       }
        else if (!/[0-9]/.test(passwordInput.value)) {
@@ -272,7 +272,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
       }
        else if (!/[!@#&$*]/.test(passwordInput.value)) {
@@ -283,7 +283,7 @@ let form = this;
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-      // event.preventDefault();
+       event.preventDefault();
         return;
       }
       else {
@@ -294,12 +294,12 @@ let form = this;
       if (repasswordInput.value !== passwordInput.value) {
         repasswordInput.classList.add('is-invalid');
         repasswordError.textContent = 'Passwords do not match';
-        clearOtherErrors([nameInputf, nameInputl,mobileInput,emailInput, passwordInput, form.genderError, form.dob,  form.address1, form.address2, form.city, form.country,form.pincode,form.skill]);
+        clearOtherErrors([nameInputf, nameInputl,mobileInput,emailInput, passwordInput, form.gender, form.dob,  form.address1, form.address2, form.city, form.country,form.pincode,form.skill]);
         let genderError = document.getElementById('genderError');
        genderError.style.display = 'none';
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-       //event.preventDefault();
+       event.preventDefault();
         return;
       } 
       else {
@@ -318,7 +318,7 @@ let form = this;
          clearOtherErrors([nameInputf, nameInputl, mobileInput,emailInput,passwordInput,repasswordInput, form.dob, form.address1, form.address2, form.city, form.country,form.pincode,form.skill]);
          let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-       //  event.preventDefault();
+         event.preventDefault();
         return;
       } 
       else {
@@ -337,7 +337,7 @@ let form = this;
         clearOtherErrors([nameInputf, nameInputl,mobileInput, emailInput, passwordInput, repasswordInput, form.gender, form.address1, form.address2, form.city, form.country,form.pincode,form.skill]);
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-       // event.preventDefault();
+        event.preventDefault();
         return;
       } 
       else if (date > stdate) {
@@ -346,7 +346,7 @@ let form = this;
         clearOtherErrors([nameInputf, nameInputl,mobileInput, emailInput,passwordInput,repasswordInput, form.gender,  form.address1, form.address2, form.city, form.country,form.pincode,form.skill]);
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-       // event.preventDefault();
+        event.preventDefault();
         return;
       } else {
         dobInput.classList.remove('is-invalid');
@@ -366,7 +366,7 @@ let form = this;
       clearOtherErrors(addressRelated1);
       let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-     // event.preventDefault();
+      event.preventDefault();
       return;
     } 
     else {
@@ -386,7 +386,7 @@ let form = this;
         clearOtherErrors(addressRelated2);
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-        //  event.preventDefault();
+          event.preventDefault();
       return;
     } 
     else {
@@ -404,7 +404,7 @@ let form = this;
         cityInput.classList.add('is-invalid');
         if (cityError) cityError.textContent = 'Please select your city';
         clearOtherErrors(cityRelated);
-        // event.preventDefault();
+        event.preventDefault();
       return;
     } 
     else {
@@ -424,7 +424,7 @@ let form = this;
         clearOtherErrors(countryRelated);
         let skillError = document.getElementById('skillError');
         skillError.style.display = 'none';
-        //  event.preventDefault();
+          event.preventDefault();
       return;
     } 
     else {
@@ -444,7 +444,7 @@ let form = this;
          clearOtherErrors([nameInputf, nameInputl,mobileInput, emailInput, passwordInput, repasswordInput, form.gender, dobInput, addressInput1, addressInput2, cityInput,countryInput,form.skill])
          let skillError = document.getElementById('skillError');
          skillError.style.display = 'none';
-         //  event.preventDefault();
+          event.preventDefault();
         return;
     }
     else if (pincodeInput.value.length < 6 || pincodeInput.value.length > 6) {
@@ -453,7 +453,7 @@ let form = this;
          clearOtherErrors([nameInputf, nameInputl,mobileInput, emailInput, passwordInput, repasswordInput, form.gender, dobInput, addressInput1, addressInput2, cityInput,countryInput,form.skill])
          let skillError = document.getElementById('skillError');
          skillError.style.display = 'none';
-         // event.preventDefault();
+         event.preventDefault();
         return;
       }
       else {
@@ -477,7 +477,7 @@ let form = this;
         skillError.textContent = 'Please enter your area of skill';
         skillError.style.display = 'block';
       }
-     // event.preventDefault();
+      event.preventDefault();
       return;
     } 
     else {
@@ -495,10 +495,10 @@ let form = this;
 
     form.classList.add('was-validated');
     if (form.querySelector('.is-invalid')) {
-    //  event.preventDefault();
+     event.preventDefault();
       return;
     }
-    // event.preventDefault();
+     event.preventDefault();
     var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
     modal.show();
-};
+});
